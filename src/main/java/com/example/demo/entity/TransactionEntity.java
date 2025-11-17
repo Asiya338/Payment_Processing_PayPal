@@ -1,0 +1,35 @@
+package com.example.demo.entity;
+
+import java.math.BigDecimal;
+import java.sql.Timestamp;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class TransactionEntity {
+
+	private Integer id;
+	private Integer userId;
+
+	private Integer paymentMethodId;
+	private Integer providerId;
+	private Integer paymentTypeId;
+	private Integer txnStatusId;
+
+	private BigDecimal amount;
+	private String currency;
+
+	private String merchantTransactionReference;
+	private String txnReference;
+	private String providerReference;
+
+	private String errorCode;
+	private String errorMessage;
+
+	private Timestamp creationDate;
+	private Integer retryCount;
+}
