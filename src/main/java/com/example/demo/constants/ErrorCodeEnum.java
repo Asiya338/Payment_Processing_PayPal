@@ -22,7 +22,9 @@ public enum ErrorCodeEnum {
 	FROM_JSON_ERROR("20012", "ERROR CONVERTING FROM JSON TO ..."),
 	PAYPAL_PROVIDER_UNKNOWN_ERROR("20013", "PayPal Provider Unknown Error occured, please try later..."),
 	ERROR_UPDATING_TRANSACTION("20014", "Error updating transaction details.."),
-	CAPTURE_PAYMENT_ERROR("20015", "Error in processing Capture Payment request. please try after initiating payment.");
+	CAPTURE_PAYMENT_ERROR("20015", "Error in processing Capture Payment request. please try after initiating payment."),
+	INVALID_AMOUNT("20016", "Amount cannot be null or negative"), INVALID_CURRENCY("20017", "Currency cannot be null"),
+	INVALID_USERID("20018", "UserId cannot be null");
 
 	private final String errorCode;
 	private final String errorMessage;

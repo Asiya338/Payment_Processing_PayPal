@@ -1,10 +1,11 @@
 package com.example.demo.service.interfaces;
 
 import com.example.demo.pojo.CreateOrderReq;
+import com.example.demo.pojo.PaymentResponse;
 
 public interface PaymentService {
 
-	public String createPayment(CreateOrderReq createOrderReq);
+	public PaymentResponse createPayment(CreateOrderReq createOrderReq);
 
 	public String initiatePayment();
 
