@@ -1,7 +1,14 @@
 package com.example.demo.service.impl;
 
+import java.util.UUID;
+
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.constants.Constant;
+import com.example.demo.dto.TransactionDto;
+import com.example.demo.pojo.CreateOrderReq;
+import com.example.demo.service.PaymentStatusProcessor;
 import com.example.demo.service.interfaces.PaymentService;
 
 import lombok.RequiredArgsConstructor;
@@ -12,10 +19,23 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class PaymentServiceImpl implements PaymentService {
 
+	private final ModelMapper modelMapper;
+	private final PaymentStatusProcessor paymentStatusProcessor;
+
 	@Override
-	public String createPayment() {
-		// TODO Auto-generated method stub
-		return null;
+	public String createPayment(CreateOrderReq createOrderReq) {
+		log.info("Create Order req : {} ", createOrderReq);
+
+		TransactionDto txnDto = modelMapper.map(createOrderReq, TransactionDto.class);
+		txnDto.setTxnStatusId(Constant.CREATED);
+		txnDto.setTxnReference(UUID.randomUUID().toString());
+
+		log.info("Transaction DTO in createPayment : {} ", txnDto);
+
+		TransactionDto processedDto = paymentStatusProcessor.processPayment(txnDto);
+		log.info("processed dto in createPayment : {} ", processedDto);
+
+		return txnDto + "";
 	}
 
 	@Override

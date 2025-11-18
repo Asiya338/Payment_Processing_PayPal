@@ -71,6 +71,34 @@
     			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
+	
+	<profiles>
+		<profile>
+			<id>local</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<spring.profiles.active>local</spring.profiles.active>
+				<logging.path>
+					D:\\ctws\\oct25ct\\logs\\payment-processing-service</logging.path>
+			</properties>
+		</profile>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<spring.profiles.active>dev</spring.profiles.active>
+				<logging.path>/var/lib/tomcat/logs/cpt/payment-processing-service</logging.path>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<spring.profiles.active>prod</spring.profiles.active>
+				<logging.path>/var/lib/tomcat/logs/cpt/payment-processing-service</logging.path>
+			</properties>
+		</profile>
+	</profiles>
 
 	<build>
 		<plugins>

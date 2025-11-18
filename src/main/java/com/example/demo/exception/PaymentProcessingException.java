@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import lombok.Data;
 
 @Data
-public class PaymentProcessingException extends Exception {
+public class PaymentProcessingException extends RuntimeException {
 
 	private final String errorCode;
 	private final String errorMessage;
