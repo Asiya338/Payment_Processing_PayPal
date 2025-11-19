@@ -7,9 +7,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.constants.Constant;
+import com.example.demo.constants.ErrorCodeEnum;
 import com.example.demo.dao.interfaces.TransactionDao;
 import com.example.demo.dto.TransactionDto;
 import com.example.demo.entity.TransactionEntity;
+import com.example.demo.exception.PaymentProcessingException;
 import com.example.demo.http.HttpRequest;
 import com.example.demo.http.HttpServiceEngine;
 import com.example.demo.paypalprovider.PPInitiatePayRes;
@@ -73,27 +75,53 @@ public class PaymentServiceImpl implements PaymentService {
 		TransactionDto processedDto = paymentStatusProcessor.processPayment(txnDto);
 		log.info("Processes DTO from CREATED to INITIATED : {} ", processedDto);
 
-		HttpRequest httpRequest = createOrderHelper.prepareHttpRequest(processedDto, initiateOrderReq);
-		log.info("HTTP REQUEST || initiatePayment : {} ", httpRequest);
+		try {
+			HttpRequest httpRequest = createOrderHelper.prepareHttpRequest(processedDto, initiateOrderReq);
+			log.info("HTTP REQUEST || initiatePayment : {} ", httpRequest);
 
-		ResponseEntity<String> httpResponse = httpServiceEngine.makeHttpCall(httpRequest);
-		log.info("HTTP RESPONSE || httpServiceEngine : {} ", httpResponse);
+			ResponseEntity<String> httpResponse = httpServiceEngine.makeHttpCall(httpRequest);
+			log.info("HTTP RESPONSE || httpServiceEngine : {} ", httpResponse);
 
-		PPInitiatePayRes initiateRes = createOrderHelper.prepareResponse(httpResponse);
-		log.info("initiateRes : {}  ", initiateRes);
+			PPInitiatePayRes initiateRes = createOrderHelper.prepareResponse(httpResponse);
+			log.info("initiateRes : {}  ", initiateRes);
 
-		txnDto.setTxnStatusId(Constant.PENDING);
-		txnDto.setProviderReference(initiateRes.getOrderId());
-		paymentStatusProcessor.processPayment(txnDto);
-		log.info("Processes DTO from INITIATED to PENDING ...");
+			txnDto.setTxnStatusId(Constant.PENDING);
+			txnDto.setProviderReference(initiateRes.getOrderId());
+			paymentStatusProcessor.processPayment(txnDto);
+			log.info("Processes DTO from INITIATED to PENDING ...");
 
-		PaymentResponse response = new PaymentResponse();
-		response.setTxnStatusId(txnDto.getTxnStatusId());
-		response.setRedirectUrl(initiateRes.getRedirectUrl());
-		response.setProviderReference(initiateRes.getOrderId());
-		response.setTxnReference(txnReference);
+			PaymentResponse response = new PaymentResponse();
+			response.setTxnStatusId(txnDto.getTxnStatusId());
+			response.setRedirectUrl(initiateRes.getRedirectUrl());
+			response.setProviderReference(initiateRes.getOrderId());
+			response.setTxnReference(txnReference);
 
-		return response;
+			return response;
+		} catch (PaymentProcessingException ex) {
+			log.error("Error while initiating payment : {} ", ex.getMessage(), ex);
+
+			txnDto.setTxnStatusId(Constant.FAILED);
+			txnDto.setErrorCode(ex.getErrorCode());
+			txnDto.setErrorMessage(ex.getErrorMessage());
+
+			TransactionDto failedDto = paymentStatusProcessor.processPayment(txnDto);
+			log.info("Processes DTO from .. to FALIED || initiatePayment : {}", failedDto);
+
+			throw ex;
+
+		} catch (Exception ex) {
+			log.error("Unexpected Error while initiating payment : {} ", ex.getMessage(), ex);
+
+			txnDto.setTxnStatusId(Constant.FAILED);
+			txnDto.setErrorCode(ErrorCodeEnum.UNEXPECTED_ERROR.getErrorCode());
+			txnDto.setErrorMessage(ErrorCodeEnum.UNEXPECTED_ERROR.getErrorMessage());
+
+			TransactionDto failedDto = paymentStatusProcessor.processPayment(txnDto);
+			log.info("Processes DTO from .. to FALIED ||initiatePayment : {}", failedDto);
+
+			throw ex;
+		}
+
 	}
 
 	@Override

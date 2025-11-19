@@ -24,7 +24,7 @@ public enum ErrorCodeEnum {
 	ERROR_UPDATING_TRANSACTION("20014", "Error updating transaction details.."),
 	CAPTURE_PAYMENT_ERROR("20015", "Error in processing Capture Payment request. please try after initiating payment."),
 	INVALID_AMOUNT("20016", "Amount cannot be null or negative"), INVALID_CURRENCY("20017", "Currency cannot be null"),
-	INVALID_USERID("20018", "UserId cannot be null");
+	INVALID_USERID("20018", "UserId cannot be null"), UNEXPECTED_ERROR("20019", "Unknown error occured");
 
 	private final String errorCode;
 	private final String errorMessage;

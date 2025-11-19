@@ -74,12 +74,15 @@ public class TransactionDaoImpl implements TransactionDao {
 		log.info("Txn entity || updateTransaction : {} ", txnEntity);
 
 		String sql = "UPDATE `transaction` SET txnStatusId = :txnStatusId,"
-				+ " providerRefernce = :providerReference WHERE id = :id LIMIT 1 ";
+				+ " providerRefernce = :providerReference , errorCode = :errorCode ,"
+				+ "errorMessage = :errorMessage WHERE id = :id LIMIT 1 ";
 
 		Map<String, Object> params = new HashMap<>();
 		params.put("txnStatusId", txnEntity.getTxnStatusId());
 		params.put("providerReference", txnEntity.getProviderReference());
 		params.put("id", txnEntity.getId());
+		params.put("errorCode", txnEntity.getErrorCode());
+		params.put("errorMessage", txnEntity.getErrorMessage());
 
 		int effectedRows = jdbcTemplate.update(sql, params);
 
