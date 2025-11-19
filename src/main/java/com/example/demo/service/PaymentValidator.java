@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.constants.ErrorCodeEnum;
 import com.example.demo.exception.PaymentProcessingException;
 import com.example.demo.pojo.CreateOrderReq;
+import com.example.demo.pojo.InitiateOrderReq;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -63,5 +64,42 @@ public class PaymentValidator {
 			throw new PaymentProcessingException(ErrorCodeEnum.INVALID_USERID.getErrorCode(),
 					ErrorCodeEnum.INVALID_USERID.getErrorMessage(), HttpStatus.BAD_REQUEST);
 		}
+	}
+
+	public void validateInitiateOrderReq(String txnReference, InitiateOrderReq initiateOrderReq) {
+		log.info("validateInitiateOrderReq ||  txnReference : {} , initiateOrderReq : {} ", txnReference,
+				initiateOrderReq);
+
+		if (txnReference == null) {
+			log.error("txn reference cannot be null ...");
+
+			throw new PaymentProcessingException(ErrorCodeEnum.TXN_REFERENCE_ERROR.getErrorCode(),
+					ErrorCodeEnum.TXN_REFERENCE_ERROR.getErrorMessage(), HttpStatus.BAD_REQUEST);
+		}
+
+		if (initiateOrderReq == null) {
+			log.error("initiateOrderReq cannot be null ...");
+
+			throw new PaymentProcessingException(ErrorCodeEnum.INITIATE_PAYMENT_ERROR.getErrorCode(),
+					ErrorCodeEnum.INITIATE_PAYMENT_ERROR.getErrorMessage(), HttpStatus.BAD_REQUEST);
+
+		}
+
+		if (initiateOrderReq.getSuccessUrl() == null) {
+			log.error("initiateOrderReq || success url cannot be null ...");
+
+			throw new PaymentProcessingException(ErrorCodeEnum.INVALID_SUCCESS_URL.getErrorCode(),
+					ErrorCodeEnum.INVALID_SUCCESS_URL.getErrorMessage(), HttpStatus.BAD_REQUEST);
+
+		}
+
+		if (initiateOrderReq.getCancelUrl() == null) {
+			log.error("initiateOrderReq || cancel url cannot be null ...");
+
+			throw new PaymentProcessingException(ErrorCodeEnum.INVALID_CANCEL_URL.getErrorCode(),
+					ErrorCodeEnum.INVALID_CANCEL_URL.getErrorMessage(), HttpStatus.BAD_REQUEST);
+
+		}
+
 	}
 }
