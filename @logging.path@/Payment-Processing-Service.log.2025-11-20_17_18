@@ -1,0 +1,23 @@
+[INFO ] 2025-11-20 17:18:21.159 [File Watcher] [Payment-Processing-Service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 2025-11-20 17:18:21.186 [Thread-1] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-11-20 17:18:21.188 [tomcat-shutdown] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:18:21.232 [tomcat-shutdown] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-11-20 17:18:21.237 [Thread-1] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:18:21.257 [Thread-1] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2025-11-20 17:18:21.280 [Thread-1] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2025-11-20 17:18:21.467 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - Starting PaymentProcessingApplication using Java 21.0.7 with PID 13840 (D:\SpringWebProj\PaymentProcessingPayPal\target\classes started by DELL in D:\SpringWebProj\PaymentProcessingPayPal)
+[DEBUG] 2025-11-20 17:18:21.467 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+[INFO ] 2025-11-20 17:18:21.467 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - The following 1 profile is active: "local"
+[INFO ] 2025-11-20 17:18:22.740 [restartedMain] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-11-20 17:18:22.745 [restartedMain] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:18:22.746 [restartedMain] [Payment-Processing-Service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-11-20 17:18:22.747 [restartedMain] [Payment-Processing-Service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+[INFO ] 2025-11-20 17:18:22.840 [restartedMain] [Payment-Processing-Service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-11-20 17:18:22.841 [restartedMain] [Payment-Processing-Service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1369 ms
+[INFO ] 2025-11-20 17:18:23.228 [restartedMain] [Payment-Processing-Service] org.springframework.validation.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+[WARN ] 2025-11-20 17:18:23.600 [restartedMain] [Payment-Processing-Service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+[INFO ] 2025-11-20 17:18:23.609 [restartedMain] [Payment-Processing-Service] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+[INFO ] 2025-11-20 17:18:23.660 [restartedMain] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:18:23.668 [restartedMain] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-11-20 17:18:23.696 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - Started PaymentProcessingApplication in 2.293 seconds (process running for 294.616)
+[INFO ] 2025-11-20 17:18:23.701 [restartedMain] [Payment-Processing-Service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged

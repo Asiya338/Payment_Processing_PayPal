@@ -1,0 +1,130 @@
+[INFO ] 2025-11-20 17:21:32.987 [File Watcher] [Payment-Processing-Service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 4 class path changes (3 additions, 0 deletions, 1 modification)
+[INFO ] 2025-11-20 17:21:32.992 [Thread-5] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-11-20 17:21:32.994 [tomcat-shutdown] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:21:33.004 [tomcat-shutdown] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-11-20 17:21:33.007 [Thread-5] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:21:33.016 [Thread-5] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+[INFO ] 2025-11-20 17:21:33.032 [Thread-5] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+[INFO ] 2025-11-20 17:21:33.222 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - Starting PaymentProcessingApplication using Java 21.0.7 with PID 13840 (D:\SpringWebProj\PaymentProcessingPayPal\target\classes started by DELL in D:\SpringWebProj\PaymentProcessingPayPal)
+[DEBUG] 2025-11-20 17:21:33.222 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+[INFO ] 2025-11-20 17:21:33.222 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - The following 1 profile is active: "local"
+[INFO ] 2025-11-20 17:21:34.541 [restartedMain] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-11-20 17:21:34.542 [restartedMain] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:21:34.542 [restartedMain] [Payment-Processing-Service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-11-20 17:21:34.542 [restartedMain] [Payment-Processing-Service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+[INFO ] 2025-11-20 17:21:34.594 [restartedMain] [Payment-Processing-Service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-11-20 17:21:34.594 [restartedMain] [Payment-Processing-Service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1362 ms
+[INFO ] 2025-11-20 17:21:34.909 [restartedMain] [Payment-Processing-Service] org.springframework.validation.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+[WARN ] 2025-11-20 17:21:35.160 [restartedMain] [Payment-Processing-Service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+[INFO ] 2025-11-20 17:21:35.166 [restartedMain] [Payment-Processing-Service] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+[INFO ] 2025-11-20 17:21:35.207 [restartedMain] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:21:35.215 [restartedMain] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-11-20 17:21:35.238 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - Started PaymentProcessingApplication in 2.091 seconds (process running for 486.159)
+[INFO ] 2025-11-20 17:21:35.244 [restartedMain] [Payment-Processing-Service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2025-11-20 17:21:47.301 [http-nio-8082-exec-2] [Payment-Processing-Service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-11-20 17:21:47.301 [http-nio-8082-exec-2] [Payment-Processing-Service] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-11-20 17:21:47.305 [http-nio-8082-exec-2] [Payment-Processing-Service] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[INFO ] 2025-11-20 17:21:47.313 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.controller.PaymentController - Initiate payment || initiateOrderReq : InitiateOrderReq(successUrl=https://merchant-app.com/payment/success, cancelUrl=https://merchant-app.com/payment/cancel) 
+[INFO ] 2025-11-20 17:21:47.313 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.PaymentServiceImpl - Transaction reference || initiatePayment : 4e556be9-fd50-4b7a-90f0-0bcb578c7449 
+[INFO ] 2025-11-20 17:21:47.313 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.PaymentValidator - validateInitiateOrderReq ||  txnReference : 4e556be9-fd50-4b7a-90f0-0bcb578c7449 , initiateOrderReq : InitiateOrderReq(successUrl=https://merchant-app.com/payment/success, cancelUrl=https://merchant-app.com/payment/cancel) 
+[INFO ] 2025-11-20 17:21:47.314 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.dao.impl.TransactionDaoImpl - Getting Transaction by txn reference : 4e556be9-fd50-4b7a-90f0-0bcb578c7449 
+[INFO ] 2025-11-20 17:21:47.322 [http-nio-8082-exec-2] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+[INFO ] 2025-11-20 17:21:47.356 [http-nio-8082-exec-2] [Payment-Processing-Service] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e0687cb
+[INFO ] 2025-11-20 17:21:47.357 [http-nio-8082-exec-2] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+[INFO ] 2025-11-20 17:21:47.380 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.dao.impl.TransactionDaoImpl - Txn entity fetched by txnReference : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=1, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:21:47.383 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.PaymentServiceImpl - Txn entity || initiatePayment : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=1, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null)  
+[INFO ] 2025-11-20 17:21:47.389 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.PaymentStatusProcessor - Transaction Dto in PaymentStatusProcessor : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:21:47.389 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.factory.PaymentStatusFactory - Initiated status processor  
+[INFO ] 2025-11-20 17:21:47.390 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.statusprocessor.InitiatedStatusProcessor - Transaction Dto || InitiatedStatusProcessor : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null)  
+[INFO ] 2025-11-20 17:21:47.393 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.statusprocessor.InitiatedStatusProcessor - Transaction Entity || InitiatedStatusProcessor : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:21:47.393 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.dao.impl.TransactionDaoImpl - Txn entity || updateTransaction : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[ERROR] 2025-11-20 17:21:47.410 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.exception.GlobalExceptionHandler - Handling Exception : PreparedStatementCallback; bad SQL grammar [UPDATE `transaction` SET txnStatusId = ?, providerRefernce = ? , errorCode = ? ,errorMessage = ? WHERE id = ? LIMIT 1 ] 
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [UPDATE `transaction` SET txnStatusId = ?, providerRefernce = ? , errorCode = ? ,errorMessage = ? WHERE id = ? LIMIT 1 ]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:112)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107)
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:993)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.update(NamedParameterJdbcTemplate.java:337)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.update(NamedParameterJdbcTemplate.java:342)
+	at com.example.demo.dao.impl.TransactionDaoImpl.updateTransaction(TransactionDaoImpl.java:88)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.demo.dao.impl.TransactionDaoImpl$$SpringCGLIB$$0.updateTransaction(<generated>)
+	at com.example.demo.service.statusprocessor.InitiatedStatusProcessor.processStatus(InitiatedStatusProcessor.java:28)
+	at com.example.demo.service.PaymentStatusProcessor.processPayment(PaymentStatusProcessor.java:35)
+	at com.example.demo.service.impl.PaymentServiceImpl.initiatePayment(PaymentServiceImpl.java:80)
+	at com.example.demo.controller.PaymentController.initiatePayment(PaymentController.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'providerRefernce' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1054)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1003)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1312)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:988)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658)
+	... 70 common frames omitted
+[WARN ] 2025-11-20 17:21:47.421 [http-nio-8082-exec-2] [Payment-Processing-Service] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [UPDATE `transaction` SET txnStatusId = ?, providerRefernce = ? , errorCode = ? ,errorMessage = ? WHERE id = ? LIMIT 1 ]]

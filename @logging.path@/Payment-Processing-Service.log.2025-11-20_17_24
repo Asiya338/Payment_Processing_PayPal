@@ -1,0 +1,110 @@
+[INFO ] 2025-11-20 17:24:52.101 [File Watcher] [Payment-Processing-Service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+[INFO ] 2025-11-20 17:24:52.112 [Thread-13] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-11-20 17:24:52.115 [tomcat-shutdown] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:24:52.147 [tomcat-shutdown] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-11-20 17:24:52.151 [Thread-13] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:24:52.168 [Thread-13] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+[INFO ] 2025-11-20 17:24:52.197 [Thread-13] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+[INFO ] 2025-11-20 17:24:52.384 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - Starting PaymentProcessingApplication using Java 21.0.7 with PID 13840 (D:\SpringWebProj\PaymentProcessingPayPal\target\classes started by DELL in D:\SpringWebProj\PaymentProcessingPayPal)
+[DEBUG] 2025-11-20 17:24:52.385 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+[INFO ] 2025-11-20 17:24:52.385 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - The following 1 profile is active: "local"
+[INFO ] 2025-11-20 17:24:53.448 [restartedMain] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-11-20 17:24:53.450 [restartedMain] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:24:53.450 [restartedMain] [Payment-Processing-Service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-11-20 17:24:53.450 [restartedMain] [Payment-Processing-Service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+[INFO ] 2025-11-20 17:24:53.496 [restartedMain] [Payment-Processing-Service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-11-20 17:24:53.496 [restartedMain] [Payment-Processing-Service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1105 ms
+[INFO ] 2025-11-20 17:24:53.768 [restartedMain] [Payment-Processing-Service] org.springframework.validation.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+[WARN ] 2025-11-20 17:24:53.981 [restartedMain] [Payment-Processing-Service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+[INFO ] 2025-11-20 17:24:53.998 [restartedMain] [Payment-Processing-Service] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+[INFO ] 2025-11-20 17:24:54.039 [restartedMain] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:24:54.047 [restartedMain] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-11-20 17:24:54.070 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - Started PaymentProcessingApplication in 1.756 seconds (process running for 684.99)
+[INFO ] 2025-11-20 17:24:54.074 [restartedMain] [Payment-Processing-Service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2025-11-20 17:24:56.966 [http-nio-8082-exec-2] [Payment-Processing-Service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-11-20 17:24:56.966 [http-nio-8082-exec-2] [Payment-Processing-Service] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-11-20 17:24:56.969 [http-nio-8082-exec-2] [Payment-Processing-Service] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+[INFO ] 2025-11-20 17:24:56.977 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.controller.PaymentController - Initiate payment || initiateOrderReq : InitiateOrderReq(successUrl=https://merchant-app.com/payment/success, cancelUrl=https://merchant-app.com/payment/cancel) 
+[INFO ] 2025-11-20 17:24:56.978 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.PaymentServiceImpl - Transaction reference || initiatePayment : 4e556be9-fd50-4b7a-90f0-0bcb578c7449 
+[INFO ] 2025-11-20 17:24:56.979 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.PaymentValidator - validateInitiateOrderReq ||  txnReference : 4e556be9-fd50-4b7a-90f0-0bcb578c7449 , initiateOrderReq : InitiateOrderReq(successUrl=https://merchant-app.com/payment/success, cancelUrl=https://merchant-app.com/payment/cancel) 
+[INFO ] 2025-11-20 17:24:56.979 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.dao.impl.TransactionDaoImpl - Getting Transaction by txn reference : 4e556be9-fd50-4b7a-90f0-0bcb578c7449 
+[INFO ] 2025-11-20 17:24:56.983 [http-nio-8082-exec-2] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+[INFO ] 2025-11-20 17:24:57.014 [http-nio-8082-exec-2] [Payment-Processing-Service] com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40c9cd7f
+[INFO ] 2025-11-20 17:24:57.014 [http-nio-8082-exec-2] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+[INFO ] 2025-11-20 17:24:57.021 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.dao.impl.TransactionDaoImpl - Txn entity fetched by txnReference : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=6, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:24:57.022 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.PaymentServiceImpl - Txn entity || initiatePayment : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=6, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null)  
+[INFO ] 2025-11-20 17:24:57.028 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.PaymentStatusProcessor - Transaction Dto in PaymentStatusProcessor : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:24:57.029 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.factory.PaymentStatusFactory - Initiated status processor  
+[INFO ] 2025-11-20 17:24:57.031 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.statusprocessor.InitiatedStatusProcessor - Transaction Dto || InitiatedStatusProcessor : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null)  
+[INFO ] 2025-11-20 17:24:57.036 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.statusprocessor.InitiatedStatusProcessor - Transaction Entity || InitiatedStatusProcessor : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:24:57.037 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.dao.impl.TransactionDaoImpl - Txn entity || updateTransaction : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:24:57.044 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.statusprocessor.InitiatedStatusProcessor - Updated Transaction Entity || InitiatedStatusProcessor : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null)
+[INFO ] 2025-11-20 17:24:57.045 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.PaymentStatusProcessor - Transaction DTO after processing status  : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:24:57.045 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.PaymentServiceImpl - Processes DTO from CREATED to INITIATED : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[ERROR] 2025-11-20 17:24:57.047 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.exception.GlobalExceptionHandler - Handling Exception : Handler dispatch failed: java.lang.Error: Unresolved compilation problem: 
+	The method setReturnurl(String) is undefined for the type PPCreateOrderReq
+ 
+jakarta.servlet.ServletException: Handler dispatch failed: java.lang.Error: Unresolved compilation problem: 
+	The method setReturnurl(String) is undefined for the type PPCreateOrderReq
+
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1104)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The method setReturnurl(String) is undefined for the type PPCreateOrderReq
+
+	at com.example.demo.service.impl.helper.PPCreateOrderHelper.prepareHttpRequest(PPCreateOrderHelper.java:42)
+	at com.example.demo.service.impl.PaymentServiceImpl.initiatePayment(PaymentServiceImpl.java:84)
+	at com.example.demo.controller.PaymentController.initiatePayment(PaymentController.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	... 43 common frames omitted
+[WARN ] 2025-11-20 17:24:57.057 [http-nio-8082-exec-2] [Payment-Processing-Service] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.Error: Unresolved compilation problem: <EOL>?The method setReturnurl(String) is undefined for the type PPCreateOrderReq<EOL>]

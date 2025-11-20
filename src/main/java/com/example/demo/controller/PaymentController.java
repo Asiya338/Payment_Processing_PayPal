@@ -35,7 +35,7 @@ public class PaymentController {
 		return response;
 	}
 
-	@PostMapping("/{orderId}/initiate")
+	@PostMapping("/{txnReference}/initiate")
 	public PaymentResponse initiatePayment(@PathVariable String txnReference,
 			@RequestBody InitiateOrderReq initiateOrderReq) {
 		log.info("Initiate payment || initiateOrderReq : {} ", initiateOrderReq);
@@ -46,7 +46,7 @@ public class PaymentController {
 		return response;
 	}
 
-	@PostMapping("/{orderId}/capture")
+	@PostMapping("/{txnReference}/capture")
 	public PaymentResponse capturePayment(@PathVariable String txnReference) {
 		log.info("Capture payment || txnReference : {} ", txnReference);
 

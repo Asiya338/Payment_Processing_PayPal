@@ -7,6 +7,6 @@ public class PPCreateOrderReq {
 
 	private double amount;
 	private String currencyCode;
-	private String returnurl;
+	private String returnUrl;
 	private String cancelUrl;
 }

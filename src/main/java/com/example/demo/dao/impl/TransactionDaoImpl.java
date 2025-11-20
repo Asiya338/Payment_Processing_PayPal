@@ -31,7 +31,7 @@ public class TransactionDaoImpl implements TransactionDao {
 	public TransactionEntity createTransaction(TransactionEntity txnEntity) {
 		log.info("TransactionEntity || createTransaction : {} ", txnEntity);
 
-		String sql = "INSERT INTO `transaction` (userId , paymentMethodId , providerId  "
+		String sql = "INSERT INTO `transaction` (userId , paymentMethodId , providerId,  "
 				+ "paymentTypeId , txnStatusId , amount , currency , merchantTransactionReference,"
 				+ "txnReference , providerReference , retryCount , errorCode , errorMessage) VALUES "
 				+ "(:userId , :paymentMethodId , :providerId , :paymentTypeId , :txnStatusId , :amount ,"
@@ -75,7 +75,7 @@ public class TransactionDaoImpl implements TransactionDao {
 		log.info("Txn entity || updateTransaction : {} ", txnEntity);
 
 		String sql = "UPDATE `transaction` SET txnStatusId = :txnStatusId,"
-				+ " providerRefernce = :providerReference , errorCode = :errorCode ,"
+				+ " providerReference = :providerReference , errorCode = :errorCode ,"
 				+ "errorMessage = :errorMessage WHERE id = :id LIMIT 1 ";
 
 		Map<String, Object> params = new HashMap<>();

@@ -1,0 +1,7 @@
+[INFO ] 2025-11-20 17:30:38.770 [RMI TCP Connection(42)-127.0.0.1] [Payment-Processing-Service] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+[INFO ] 2025-11-20 17:30:38.779 [RMI TCP Connection(42)-127.0.0.1] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-11-20 17:30:38.782 [tomcat-shutdown] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:30:38.803 [tomcat-shutdown] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-11-20 17:30:38.807 [RMI TCP Connection(42)-127.0.0.1] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:30:38.818 [RMI TCP Connection(42)-127.0.0.1] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+[INFO ] 2025-11-20 17:30:38.833 [RMI TCP Connection(42)-127.0.0.1] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.

@@ -1,0 +1,172 @@
+[INFO ] 2025-11-20 17:22:34.562 [File Watcher] [Payment-Processing-Service] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 2025-11-20 17:22:34.567 [Thread-9] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[INFO ] 2025-11-20 17:22:34.568 [tomcat-shutdown] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:22:34.579 [tomcat-shutdown] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[INFO ] 2025-11-20 17:22:34.582 [Thread-9] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:22:34.589 [Thread-9] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+[INFO ] 2025-11-20 17:22:34.597 [Thread-9] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+[INFO ] 2025-11-20 17:22:34.764 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - Starting PaymentProcessingApplication using Java 21.0.7 with PID 13840 (D:\SpringWebProj\PaymentProcessingPayPal\target\classes started by DELL in D:\SpringWebProj\PaymentProcessingPayPal)
+[DEBUG] 2025-11-20 17:22:34.764 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+[INFO ] 2025-11-20 17:22:34.765 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - The following 1 profile is active: "local"
+[INFO ] 2025-11-20 17:22:35.635 [restartedMain] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+[INFO ] 2025-11-20 17:22:35.636 [restartedMain] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:22:35.636 [restartedMain] [Payment-Processing-Service] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2025-11-20 17:22:35.636 [restartedMain] [Payment-Processing-Service] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+[INFO ] 2025-11-20 17:22:35.668 [restartedMain] [Payment-Processing-Service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-11-20 17:22:35.668 [restartedMain] [Payment-Processing-Service] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 900 ms
+[INFO ] 2025-11-20 17:22:35.938 [restartedMain] [Payment-Processing-Service] org.springframework.validation.beanvalidation.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+[WARN ] 2025-11-20 17:22:36.191 [restartedMain] [Payment-Processing-Service] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+[INFO ] 2025-11-20 17:22:36.207 [restartedMain] [Payment-Processing-Service] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+[INFO ] 2025-11-20 17:22:36.241 [restartedMain] [Payment-Processing-Service] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2025-11-20 17:22:36.246 [restartedMain] [Payment-Processing-Service] org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+[INFO ] 2025-11-20 17:22:36.266 [restartedMain] [Payment-Processing-Service] com.example.demo.PaymentProcessingApplication - Started PaymentProcessingApplication in 1.566 seconds (process running for 547.187)
+[INFO ] 2025-11-20 17:22:36.270 [restartedMain] [Payment-Processing-Service] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2025-11-20 17:22:41.365 [http-nio-8082-exec-2] [Payment-Processing-Service] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2025-11-20 17:22:41.365 [http-nio-8082-exec-2] [Payment-Processing-Service] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2025-11-20 17:22:41.369 [http-nio-8082-exec-2] [Payment-Processing-Service] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+[INFO ] 2025-11-20 17:22:41.379 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.controller.PaymentController - Initiate payment || initiateOrderReq : InitiateOrderReq(successUrl=https://merchant-app.com/payment/success, cancelUrl=https://merchant-app.com/payment/cancel) 
+[INFO ] 2025-11-20 17:22:41.380 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.PaymentServiceImpl - Transaction reference || initiatePayment : 4e556be9-fd50-4b7a-90f0-0bcb578c7449 
+[INFO ] 2025-11-20 17:22:41.380 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.PaymentValidator - validateInitiateOrderReq ||  txnReference : 4e556be9-fd50-4b7a-90f0-0bcb578c7449 , initiateOrderReq : InitiateOrderReq(successUrl=https://merchant-app.com/payment/success, cancelUrl=https://merchant-app.com/payment/cancel) 
+[INFO ] 2025-11-20 17:22:41.381 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.dao.impl.TransactionDaoImpl - Getting Transaction by txn reference : 4e556be9-fd50-4b7a-90f0-0bcb578c7449 
+[INFO ] 2025-11-20 17:22:41.384 [http-nio-8082-exec-2] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+[INFO ] 2025-11-20 17:22:41.430 [http-nio-8082-exec-2] [Payment-Processing-Service] com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4454870c
+[INFO ] 2025-11-20 17:22:41.430 [http-nio-8082-exec-2] [Payment-Processing-Service] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+[INFO ] 2025-11-20 17:22:41.438 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.dao.impl.TransactionDaoImpl - Txn entity fetched by txnReference : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=1, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:22:41.439 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.PaymentServiceImpl - Txn entity || initiatePayment : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=1, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null)  
+[INFO ] 2025-11-20 17:22:41.446 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.PaymentStatusProcessor - Transaction Dto in PaymentStatusProcessor : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:22:41.448 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.factory.PaymentStatusFactory - Initiated status processor  
+[INFO ] 2025-11-20 17:22:41.450 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.statusprocessor.InitiatedStatusProcessor - Transaction Dto || InitiatedStatusProcessor : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null)  
+[INFO ] 2025-11-20 17:22:41.457 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.statusprocessor.InitiatedStatusProcessor - Transaction Entity || InitiatedStatusProcessor : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:22:41.457 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.dao.impl.TransactionDaoImpl - Txn entity || updateTransaction : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:22:41.469 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.statusprocessor.InitiatedStatusProcessor - Updated Transaction Entity || InitiatedStatusProcessor : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null)
+[INFO ] 2025-11-20 17:22:41.470 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.PaymentStatusProcessor - Transaction DTO after processing status  : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:22:41.470 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.PaymentServiceImpl - Processes DTO from CREATED to INITIATED : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=2, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=null, errorMessage=null, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:22:41.478 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.helper.PPCreateOrderHelper - Prepared http request for initiating payment : {"amount":96.0,"currencyCode":"USD","returnurl":"https://merchant-app.com/payment/success","cancelUrl":"https://merchant-app.com/payment/cancel"} 
+[INFO ] 2025-11-20 17:22:41.478 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.PaymentServiceImpl - HTTP REQUEST || initiatePayment : HttpRequest(url=http://localhost:8083/orders, httpMethod=POST, headers=[Content-Type:"application/json"], body={"amount":96.0,"currencyCode":"USD","returnurl":"https://merchant-app.com/payment/success","cancelUrl":"https://merchant-app.com/payment/cancel"}) 
+[INFO ] 2025-11-20 17:22:42.253 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.PaymentServiceImpl - HTTP RESPONSE || httpServiceEngine : <400 BAD_REQUEST Bad Request,{"errorCode":"30002","errorMessage":"return url required"},[]> 
+[INFO ] 2025-11-20 17:22:42.254 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.helper.PPCreateOrderHelper - HTTP RESPONSE for initiate payment : <400 BAD_REQUEST Bad Request,{"errorCode":"30002","errorMessage":"return url required"},[]>  
+[ERROR] 2025-11-20 17:22:42.254 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.helper.PPCreateOrderHelper - Recieved 4xx, 5xx client & server error || initiateResponse
+[ERROR] 2025-11-20 17:22:42.269 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.helper.PPCreateOrderHelper -  PPErrorResponse : PPErrorResponse(errorCode=30002, errorMessage=return url required)
+[ERROR] 2025-11-20 17:22:42.270 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.PaymentServiceImpl - Error while initiating payment : return url required 
+com.example.demo.exception.PaymentProcessingException: return url required
+	at com.example.demo.service.impl.helper.PPCreateOrderHelper.prepareResponse(PPCreateOrderHelper.java:87)
+	at com.example.demo.service.impl.PaymentServiceImpl.initiatePayment(PaymentServiceImpl.java:90)
+	at com.example.demo.controller.PaymentController.initiatePayment(PaymentController.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[INFO ] 2025-11-20 17:22:42.272 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.PaymentStatusProcessor - Transaction Dto in PaymentStatusProcessor : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=6, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:22:42.272 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.factory.PaymentStatusFactory - Failed status processor  
+[INFO ] 2025-11-20 17:22:42.273 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.statusprocessor.FailedStatusProcessor - TransactionDto || FailedStatusProcessor : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=6, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:22:42.275 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.statusprocessor.FailedStatusProcessor - TransactionEntity || FailedStatusProcessor : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=6, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:22:42.275 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.dao.impl.TransactionDaoImpl - Txn entity || updateTransaction : TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=6, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:22:42.281 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.statusprocessor.FailedStatusProcessor - processedEntity || FailedStatusProcessor :  TransactionEntity(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=6, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:22:42.281 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.PaymentStatusProcessor - Transaction DTO after processing status  : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=6, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null) 
+[INFO ] 2025-11-20 17:22:42.282 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.service.impl.PaymentServiceImpl - Processes DTO from .. to FALIED || initiatePayment : TransactionDto(id=13, userId=6776221, paymentMethodId=1, providerId=1, paymentTypeId=1, txnStatusId=6, amount=96.00, currency=USD, merchantTransactionReference=ORD_9090_1897_1121, txnReference=4e556be9-fd50-4b7a-90f0-0bcb578c7449, providerReference=null, errorCode=30002, errorMessage=return url required, creationDate=2025-11-20 17:19:11.41, retryCount=null)
+[ERROR] 2025-11-20 17:22:42.285 [http-nio-8082-exec-2] [Payment-Processing-Service] com.example.demo.exception.GlobalExceptionHandler - Handling PaymentProcessingException: return url required
+com.example.demo.exception.PaymentProcessingException: return url required
+	at com.example.demo.service.impl.helper.PPCreateOrderHelper.prepareResponse(PPCreateOrderHelper.java:87)
+	at com.example.demo.service.impl.PaymentServiceImpl.initiatePayment(PaymentServiceImpl.java:90)
+	at com.example.demo.controller.PaymentController.initiatePayment(PaymentController.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[WARN ] 2025-11-20 17:22:42.295 [http-nio-8082-exec-2] [Payment-Processing-Service] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [PaymentProcessingException(errorCode=30002, errorMessage=return url required, httpStatus=400 BAD_REQUEST)]

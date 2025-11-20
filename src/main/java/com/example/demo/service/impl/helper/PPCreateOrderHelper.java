@@ -39,7 +39,7 @@ public class PPCreateOrderHelper {
 		PPCreateOrderReq ppCreateOrderReq = new PPCreateOrderReq();
 		ppCreateOrderReq.setAmount(processedDto.getAmount().doubleValue());
 		ppCreateOrderReq.setCurrencyCode(processedDto.getCurrency());
-		ppCreateOrderReq.setReturnurl(initiateOrderReq.getSuccessUrl());
+		ppCreateOrderReq.setReturnUrl(initiateOrderReq.getSuccessUrl());
 		ppCreateOrderReq.setCancelUrl(initiateOrderReq.getCancelUrl());
 
 		String reqAsJson = jsonUtil.toJson(ppCreateOrderReq);
