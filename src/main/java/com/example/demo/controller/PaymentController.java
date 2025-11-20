@@ -1,5 +1,8 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -49,6 +52,16 @@ public class PaymentController {
 
 		PaymentResponse response = paymentService.capturePayment(txnReference);
 		log.info("CAPTURE PAYMENT response : {}  ", response);
+
+		return response;
+	}
+
+	@GetMapping("/{userId}")
+	public List<PaymentResponse> getPaymentsByUserId(@PathVariable String userId) {
+		log.info("get all the payment transactions || userId : {} ", userId);
+
+		List<PaymentResponse> response = paymentService.getPaymentsByUserId(userId);
+		log.info("All PAYMENTs response : {}  ", response);
 
 		return response;
 	}

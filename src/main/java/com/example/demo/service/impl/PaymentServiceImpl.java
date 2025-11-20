@@ -1,5 +1,7 @@
 package com.example.demo.service.impl;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
@@ -183,6 +185,21 @@ public class PaymentServiceImpl implements PaymentService {
 			 */
 			throw ex;
 		}
+	}
+
+	@Override
+	public List<PaymentResponse> getPaymentsByUserId(String userId) {
+		log.info("getPaymentsByUserId || userId : {} ", userId);
+
+		List<TransactionEntity> transactions = transactionDao.getTransactionsByUserId(userId);
+		List<PaymentResponse> response = new ArrayList<>();
+		for (TransactionEntity transaction : transactions) {
+			response.add(modelMapper.map(transaction, PaymentResponse.class));
+		}
+
+		log.info("ALL PAYMENT TRANSACTIONS  : {} ", response);
+
+		return response;
 	}
 
 }

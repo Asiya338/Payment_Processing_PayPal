@@ -1,6 +1,7 @@
 package com.example.demo.dao.impl;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.http.HttpStatus;
@@ -94,6 +95,22 @@ public class TransactionDaoImpl implements TransactionDao {
 		}
 
 		return txnEntity;
+	}
+
+	@Override
+	public List<TransactionEntity> getTransactionsByUserId(String userId) {
+		log.info("User Id || TransactionDaoImpl : {}  ", userId);
+
+		String sql = "SELECT * FROM  `transaction` WHERE userId = :userId ";
+
+		Map<String, Object> params = new HashMap<>();
+		params.put("userId", userId);
+
+		List<TransactionEntity> transactions = jdbcTemplate.query(sql, params,
+				new BeanPropertyRowMapper(TransactionEntity.class));
+		log.info("All transaction done by user with userId : {} || : {} ", userId, transactions);
+
+		return transactions;
 	}
 
 }
