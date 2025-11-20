@@ -14,12 +14,14 @@ import com.example.demo.entity.TransactionEntity;
 import com.example.demo.exception.PaymentProcessingException;
 import com.example.demo.http.HttpRequest;
 import com.example.demo.http.HttpServiceEngine;
+import com.example.demo.paypalprovider.PPCaptureOrderRes;
 import com.example.demo.paypalprovider.PPInitiatePayRes;
 import com.example.demo.pojo.CreateOrderReq;
 import com.example.demo.pojo.InitiateOrderReq;
 import com.example.demo.pojo.PaymentResponse;
 import com.example.demo.service.PaymentStatusProcessor;
 import com.example.demo.service.PaymentValidator;
+import com.example.demo.service.impl.helper.PPCaptureOrderHelper;
 import com.example.demo.service.impl.helper.PPCreateOrderHelper;
 import com.example.demo.service.interfaces.PaymentService;
 
@@ -37,6 +39,7 @@ public class PaymentServiceImpl implements PaymentService {
 	private final TransactionDao transactionDao;
 	private final HttpServiceEngine httpServiceEngine;
 	private final PPCreateOrderHelper createOrderHelper;
+	private final PPCaptureOrderHelper ppCaptureOrderHelper;
 
 	@Override
 	public PaymentResponse createPayment(CreateOrderReq createOrderReq) {
@@ -125,9 +128,61 @@ public class PaymentServiceImpl implements PaymentService {
 	}
 
 	@Override
-	public String capturePayment() {
-		// TODO Auto-generated method stub
-		return null;
+	public PaymentResponse capturePayment(String txnReference) {
+		log.info(" txnReference || capturePayment : {}  ", txnReference);
+
+		TransactionEntity txnEntity = transactionDao.getTransactionByTxnReference(txnReference);
+		log.info("TransactionEntity for given txnReference : {} | : {}  ", txnReference, txnEntity);
+
+		TransactionDto txnDto = modelMapper.map(txnEntity, TransactionDto.class);
+		log.info("TransactionDto || capturePayment : {} ", txnDto);
+
+		txnDto.setTxnStatusId(Constant.APPROVED);
+		paymentStatusProcessor.processPayment(txnDto);
+
+		try {
+			HttpRequest httpRequest = ppCaptureOrderHelper.prepareHttpRequest(txnDto);
+			log.info("HttpRequest || capturePayment : {} ", httpRequest);
+
+			ResponseEntity<String> httpResponse = httpServiceEngine.makeHttpCall(httpRequest);
+			log.info("Http Response || capturePayment : {} ", httpResponse);
+
+			PPCaptureOrderRes captureResponse = ppCaptureOrderHelper.prepareHttpResponse(httpResponse);
+			log.info(" captureResponse || capture payment : {} ", captureResponse);
+
+			txnDto.setTxnStatusId(Constant.SUCCESS);
+			paymentStatusProcessor.processPayment(txnDto);
+			log.info("Updated payment status to SUCCESS... ");
+
+			PaymentResponse response = new PaymentResponse();
+			response.setTxnStatusId(txnDto.getTxnStatusId());
+			response.setTxnReference(txnDto.getTxnReference());
+			response.setProviderReference(captureResponse.getOrderId());
+
+			log.info("Cature payment response : {}  ", response);
+
+			return response;
+		} catch (PaymentProcessingException ex) {
+			log.error("Received error response || capture payment : {} ", ex.getErrorMessage(), ex);
+
+			/*
+			 * Here we don't update it as FAILED, as it has been approved by user, then
+			 * money will be debitd from it's account. so we can build reconcilation sytsem
+			 * that will check handle pending approved payments
+			 * 
+			 */
+			throw ex;
+		} catch (Exception ex) {
+			log.error("Received Unexpected error response || capture payment : {} ", ex.getMessage(), ex);
+
+			/*
+			 * Here we don't update it as FAILED, as it has been approved by user, then
+			 * money will be debitd from it's account. so we can build reconcilation sytsem
+			 * that will check handle pending approved payments
+			 * 
+			 */
+			throw ex;
+		}
 	}
 
 }

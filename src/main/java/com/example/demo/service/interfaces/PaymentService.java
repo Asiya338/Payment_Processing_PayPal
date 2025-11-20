@@ -10,5 +10,5 @@ public interface PaymentService {
 
 	public PaymentResponse initiatePayment(String txnReference, InitiateOrderReq initiateOrderReq);
 
-	public String capturePayment();
+	public PaymentResponse capturePayment(String txnReference);
 }

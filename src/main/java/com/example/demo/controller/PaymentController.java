@@ -44,8 +44,13 @@ public class PaymentController {
 	}
 
 	@PostMapping("/{orderId}/capture")
-	public String capturePayment(@PathVariable String orderId) {
-		return null;
+	public PaymentResponse capturePayment(@PathVariable String txnReference) {
+		log.info("Capture payment || txnReference : {} ", txnReference);
+
+		PaymentResponse response = paymentService.capturePayment(txnReference);
+		log.info("CAPTURE PAYMENT response : {}  ", response);
+
+		return response;
 	}
 
 }
