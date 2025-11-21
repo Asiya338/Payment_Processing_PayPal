@@ -310,9 +310,7 @@ spring.datasource.password=your_password
 # PayPal Provider (downstream)
 PAYPAL_PROVIDER_BASE_URL=http://localhost:8083
 
-# (Optional) Spring profiles, logging, etc.
--------------------
-
+----------------
 Build
 ```
 mvn clean package
