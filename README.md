@@ -21,7 +21,7 @@ Implemented features include:
 
 ```
 src/main/java
-└── com.hulkhiretech.payments
+└── com.example.demo.payments
 ├── config # DB, RestClient, Resilience4j, Swagger, Micrometer configs
 ├── constants # Constant keys (statuses, error codes, provider URLs)
 ├── controller # REST API controllers (endpoints)
