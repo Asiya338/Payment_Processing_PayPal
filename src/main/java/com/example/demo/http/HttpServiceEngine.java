@@ -10,6 +10,7 @@ import org.springframework.web.client.RestClient;
 import com.example.demo.constants.ErrorCodeEnum;
 import com.example.demo.exception.PaymentProcessingException;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,6 +21,7 @@ public class HttpServiceEngine {
 
 	private final RestClient restClient;
 
+	@CircuitBreaker(name = "payment-processing-service", fallbackMethod = "fallbackProcessPayment")
 	public ResponseEntity<String> makeHttpCall(HttpRequest httpRequest) {
 
 		try {
@@ -52,6 +54,13 @@ public class HttpServiceEngine {
 
 		}
 
+	}
+
+	public ResponseEntity<String> fallbackProcessPayment(HttpRequest httpRequest, Throwable t) {
+		log.error("Fallback method called due to || fallbackProcessPayment : {} ", t.getMessage(), t);
+
+		throw new PaymentProcessingException(ErrorCodeEnum.PAYPAL_PROVIDER_SERVICE_UNAVAILABLE.getErrorCode(),
+				ErrorCodeEnum.PAYPAL_PROVIDER_SERVICE_UNAVAILABLE.getErrorMessage(), HttpStatus.SERVICE_UNAVAILABLE);
 	}
 
 }
