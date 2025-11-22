@@ -14,6 +14,7 @@ Implemented features include:
 - 📘 Swagger / OpenAPI documentation  
 - 🚦 Spring Boot Actuator for monitoring  
 - 🧰 Global exception handling with consistent `200xx` error codes
+- Registered as Eureka CLient 
 
 ----------------------------
 
@@ -261,6 +262,46 @@ Hourly rolling policy, retain max 20 files
 Log pattern includes traceId and spanId (Micrometer integration)
 
 Micrometer provides trace and metrics; integrated with Actuator
+-------------------------
+
+#Registered as Eureka Client in Eureka Service Registry
+> Add dependency and dependency management in pom.xml
+```
+<dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>2024.0.1</version> <!-- Use a version compatible with Spring Boot 3.4.2 -->
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+> Add @EnableDiscoveryClient annotation in main application class
+> add corresponding suctom config in local profile
+```
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true
+eureka.instance.prefer-ip-address=true
+eureka.instance.instance-id=${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+```
+> Create @LoadBalanced RestClient.Builder custom bean to enable load balancing
+```
+@Bean
+@LoadBalanced
+RestClient.Builder loadBalancedRestClientBuilder() {
+       return RestClient.builder();
+}
+```
+
 
 ------------------------------
 
