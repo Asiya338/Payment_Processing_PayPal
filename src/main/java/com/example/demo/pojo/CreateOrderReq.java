@@ -2,9 +2,11 @@ package com.example.demo.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @Data
+@NoArgsConstructor
 public class CreateOrderReq {
 	private int userId;
 	private String merchantTransactionReference;

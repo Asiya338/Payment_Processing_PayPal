@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class InitiateOrderReq {
-
 	private String successUrl;
 	private String cancelUrl;
 }
