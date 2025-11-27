@@ -58,7 +58,7 @@ public class PaymentValidator {
 					ErrorCodeEnum.INVALID_CURRENCY.getErrorMessage(), HttpStatus.BAD_REQUEST);
 		}
 
-		if (createOrderReq.getUserId() == null) {
+		if (createOrderReq.getUserId() <= 0) {
 			log.error("CreateOrderReq || UserId cannot be null");
 
 			throw new PaymentProcessingException(ErrorCodeEnum.INVALID_USERID.getErrorCode(),
